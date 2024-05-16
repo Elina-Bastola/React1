@@ -1,6 +1,8 @@
+
 *{
     margin: 0;
     padding: 0;
+box-sizing: border-box;
 }
 .top .buttum{
     &:hover{
@@ -39,7 +41,7 @@
      
         text-align: center;
     }
-    @media(max-width:500){
+    /* @media(max-width:500){
      .top 
      {  
         .nav ul li{
@@ -47,8 +49,16 @@
            display: inline-block;
         }
     }
+    }*/
+    .nav{
+        width: 100%;
+       
     }
-    @media(max-width:600){
+    .nav .links{
+        cursor: pointer;
+      
+    }
+    @media(max-width:768){
         .builder{
             margin-left:40px;
            
@@ -56,30 +66,61 @@
     }
     .b{
         display: none;
-    }
-    /* @media(max-width:768px){
-    .navbar{
+    } 
+
+    @media (max-width: 768px) {
+        .nav ul li:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+
+    @media(max-width:600px){
+    .nav{
 position: relative;
-height: 100%;
-transition: 0.9s height ease-in-out;
-ul li{
-    left: 0;
-    width: 100%;
-}
-.nav-link-mobile{
-position: absolute;
-display: block;
-left: 0;
-top: 10%;
-transition: all 0.9s ease-in-out;
-width: 100%;
-}
-.mobile-menu-icon{
-position: absolute;
-display: block;
+transition: 0.5s height ease-in-out;
+    }
+
+.nav .toogle-icon{
+    display: block;
+  top: 28px;
 right: 20px;
+    position: absolute;
+}
+
+  .navbar.expanded{
+height: 100vh;
+  }
+  nav.navbar.expanded .links{
+position: absolute;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   li{
+    margin: 15px 0px;
+    font-size: 24px;
+  }
+}
+.nav .links{
+    display: none;
 }
     }
 
-} */
 
+
+    .sticky{
+        animation:fadeIn 2s ;
+        position: fixed;
+        width: 100%;
+        background: #fff;
+        top: 0;
+        z-index: 9999999999;
+  box-shadow: 0px 0px 10px 10px #ccc;
+      }
+      @keyframes fadeIn{
+        0%{transform: translateY(-100%);}
+        100%{transform: translateY(0%);}
+      }

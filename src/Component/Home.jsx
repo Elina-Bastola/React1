@@ -7,11 +7,13 @@ import News from './News/News'
 function Home() {
   return (
     <>
+   
 <News cat="Business"/>
 <News cat="entertainment"/>
 <News cat="general"/>
 <News cat="health"/>
 <News cat="science"/>
+
 
     </>
   )

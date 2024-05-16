@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
 import './Header.css'
 import Home from '../Home'
@@ -12,33 +12,48 @@ import Typewriter from 'typewriter-effect';
 
 
 function Header() {
-    // const [click ,setClick]= useState(false);
-    // const handleClick = () => setClick(!click);
-    let [Mobile, setMobile]=useState(false)
+    
+    let [scrollNav, setScrollNav]=useState()
+  useEffect(()=>{
+    window.addEventListener('scroll',()=>{
+      if(scrollY > 100){
+        setScrollNav('sticky')
+      }
+      else{
+        setScrollNav()
+      }
+    })
+  })
+    let [toggle, setToggle]=useState(false)
+   let handleToggle = () => {
+        setToggle(!toggle);
+      };
   return (
     <>
   
-    <section className='top bg-[#white] justify-between lg:mx-0 md:mx-2 sm:mr-2'>
+    <section className='top bg-[#white] justify-between lg:mx-0 md:mx-3 sm:mr-2'>
+    <div className={scrollNav} >
 <div className="container py-6 mx-auto justify-between items-center flex ">
-    
-    <div className="logo sm:mx-8">
+  
+    <div className="logo sm:mx-8 md:mx-0">
   <Link to="/">  <img  src="https://avada.com/wp-content/uploads/2021/07/avada-logo-svg.svg"  alt="" />
   </Link>
 </div>
 
-<nav className='items-center justify-between  '>
-    <div className="nav  lg:block duration-500 ">
-    <div className={Mobile ? "nav-link-mobile" : "nav-links"} onClick={()=>setMobile(false)}>
-    <ul className=  ' gap-8 text-xl text-center sm:block lg:flex sm:flex-row hid '  >
+<nav className={toggle? 'navbar expanded' : 'navbar'}>
+    
+    <div className="nav  duration-500 flex  justify-between items-center" >
+   
+    <ul className=  ' gap-7 text-xl text-center lg:flex   links px-8 md:hidden sm:hidden '  >
         <li className='hover:text-[#65BD7D] hover:bg-[#F6F6F6]  rounded-md p-2'> <Link to="/cat/business"> Avada </Link></li>
         <li className='hover:text-[#65BD7D] hover:bg-[#F6F6F6] rounded-md p-2'> <Link to="/cat/entertainment"> Avada For </Link></li>
         <li className='hover:text-[#65BD7D] hover:bg-[#F6F6F6]  rounded-md p-2'> <Link to="/cat/general"> Hosting </Link></li>
         <li className='hover:text-[#65BD7D] hover:bg-[#F6F6F6]  rounded-md p-2'> <Link to="/cat/health"> Customization</Link></li>
         <li className='hover:text-[#65BD7D] hover:bg-[#F6F6F6]  rounded-md p-2'> <Link to="/cat/science"> Resources</Link></li>
     </ul>
-    </div>
-    </div>
-</nav>
+ 
+    {/* </div> */}
+   
 
 
 
@@ -47,17 +62,22 @@ function Header() {
 <div className=" border-b bg-[#65BD7D] py-2 px-3 rounded-md buttum sm:hidden lg:block hidden ">
     <p className='  text-xl text-black '> My Avada </p>
 </div>
+
    {/* <div class=" menu flex items-center gap-6"> 
                
                   
                   <button onClick={()=> setMenu(!menu)} className=' w-[50px] h-[50px]  lg:hidden flex px-0  gap-2 text-xl  text-black font-bold'> <i class="bi bi-list text-2xl text-black font-bold" ></i>  </button>
            
             </div>  */}
-            <button className='mobile-menu-icon text-2xl font-extrabold lg:hidden md:block mr-3 ' onClick={()=> setMobile(!Mobile)}> 
-            {Mobile ? <ImCross /> :   <FiMenu />}
+            <button className='toogle-icon text-2xl font-extrabold lg:hidden md:block mr-3 ' onClick={handleToggle}> 
+            {toggle ? <ImCross />:<FiMenu />}
           
             </button>
-
+            </div>
+           
+               
+</nav>
+</div>
 </div>
     </section>
 
@@ -85,6 +105,7 @@ function Header() {
         <img className='md:w-[700px] h-[500px] sm:full hover:scale-105 duration-1000 sm:my-8 sm:mx-auto ' src="https://avada.com/wp-content/uploads/2021/07/home-hero-20@2x.jpg"  alt="" />
     </div>
 </div>
+   
     </section>
 
     <section className='Design py-14 '>
