@@ -19,8 +19,8 @@ fetch(`https://newsapi.org/v2/top-headlines?category=${props.cat}&apiKey=f65a679
     <h4 className='font-bold text-2xl uppercase '>{props.cat} </h4>
     {/* <Link to="/" className='py-2 bg-[#000] text-lime-50'> Read More  </Link> */}
 </div>
-<div className="md:flex gap-5 justify-between grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:mx-6 md:mx-0">
-    {data.slice(5,8).map((a)=>(
+<div className="md:flex gap-5 justify-between grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 sm:mx-6 md:mx-0">
+    {data.slice(5,9).map((a)=>(
         <div key={a} className='md:w-[32%] '>
          
              <img src={a.urlToImage ? a.urlToImage : Logo} className='h-[220px] w-[100%] my-5 shadow-lg rounded-lg ' alt="" />
