@@ -31,7 +31,7 @@ function Header() {
   return (
     <>
   
-    <section className='top bg-[#white] justify-between lg:mx-0 md:mx-3 sm:mr-2'>
+    <section className='top bg-[white] justify-between lg:mx-0 md:mx-3 sm:mr-2'>
     <div className={scrollNav} >
 <div className="container py-6 mx-auto justify-between items-center flex ">
   

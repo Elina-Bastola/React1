@@ -118,7 +118,7 @@ position: absolute;
         background: #fff;
         top: 0;
         z-index: 9999999999;
-  box-shadow: 0px 0px 10px 10px #ccc;
+  box-shadow: 0px 0px 3px 3px #ccc;
       }
       @keyframes fadeIn{
         0%{transform: translateY(-100%);}
