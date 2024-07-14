@@ -44,7 +44,7 @@ function Header() {
     
     <div className="nav  duration-500 flex  justify-between items-center" >
    
-    <ul className=  ' gap-7 text-xl text-center lg:flex   links px-8 md:hidden sm:hidden '  >
+    <ul className=  ' gap-7 text-xl text-center lg:flex   links px-8 md:hidden hidden '  >
         <li className='hover:text-[#65BD7D] hover:bg-[#F6F6F6]  rounded-md p-2'> <Link to="/cat/business"> Avada </Link></li>
         <li className='hover:text-[#65BD7D] hover:bg-[#F6F6F6] rounded-md p-2'> <Link to="/cat/entertainment"> Avada For </Link></li>
         <li className='hover:text-[#65BD7D] hover:bg-[#F6F6F6]  rounded-md p-2'> <Link to="/cat/general"> Hosting </Link></li>
@@ -97,7 +97,7 @@ function Header() {
 </h1> 
    <div className="content ">
     <p className=' py-8 display-block ' >Trusted by beginners, marketers & professionals; <span>Built with usability and performance in mind.</span></p>
-   <button className='py-5 px-5 border-b bg-[#141414] text-[#fff] button'> Start Building  <i class="bi bi-arrow-right-short"></i></button>
+   <button className='py-5 px-5 border-b bg-[#141414] text-[#fff] button'> Start Building  <i className="bi bi-arrow-right-short"></i></button>
    </div>
    </div>
    
@@ -127,15 +127,15 @@ function Header() {
     </div>
 <div className="builder md:flex my-16 justify-between grid lg:grid-cols-2 md:grid-cols-1 ">
     <div className="builder-point  text-2xl leading-[4rem] sm:ml-5 md:ml-5 ">
-        <h3 > <Link to=''> <i class="bi bi-clipboard-check-fill pr-2"></i> Live Visual Builder </Link></h3>
-        <h3> <Link to=''> <i class="bi bi-window-sidebar pr-2"></i>  Layout Builder </Link></h3>
-        <h3> <Link to=''> <i class="bi bi-archive-fill pr-2"></i> Header Builder </Link></h3>
-        <h3> <Link to=''> <i class="bi bi-journal-album pr-2"></i> Mega Builder </Link></h3>
-        <h3> <Link to=''> <i class="bi bi-archive-fill pr-2"></i> Footer Builder </Link></h3>
-        <h3> <Link to=''> <i class="bi bi-ui-checks-grid pr-2"></i> Form Builder </Link></h3>
-        <h3> <Link to=''> <i class="bi bi-grid-fill pr-2"></i> Off Canvas </Link></h3>
-        <h3> <Link to=''> <i class="bi bi-check-square-fill pr-2"></i> Setup Wizard </Link></h3>
-        <h3> <Link to=''> <i class="bi bi-border-width pr-2"></i> Performance Wizard </Link></h3>
+        <h3 > <Link to=''> <i className="bi bi-clipboard-check-fill pr-2"></i> Live Visual Builder </Link></h3>
+        <h3> <Link to=''> <i className="bi bi-window-sidebar pr-2"></i>  Layout Builder </Link></h3>
+        <h3> <Link to=''> <i className="bi bi-archive-fill pr-2"></i> Header Builder </Link></h3>
+        <h3> <Link to=''> <i className="bi bi-journal-album pr-2"></i> Mega Builder </Link></h3>
+        <h3> <Link to=''> <i className="bi bi-archive-fill pr-2"></i> Footer Builder </Link></h3>
+        <h3> <Link to=''> <i className="bi bi-ui-checks-grid pr-2"></i> Form Builder </Link></h3>
+        <h3> <Link to=''> <i className="bi bi-grid-fill pr-2"></i> Off Canvas </Link></h3>
+        <h3> <Link to=''> <i className="bi bi-check-square-fill pr-2"></i> Setup Wizard </Link></h3>
+        <h3> <Link to=''> <i className="bi bi-border-width pr-2"></i> Performance Wizard </Link></h3>
         <h3></h3>
         </div>
 <div className="live-visual overflow-hidden  ">
@@ -145,9 +145,9 @@ function Header() {
     </div>
 
     </section>
-    <script>
+    {/* <script>
         document.queryselector('#menuToogle' .)
-    </script>
+    </script> */}
      <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/cat/:cid" element={<Category/>} />
