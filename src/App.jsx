@@ -1,21 +1,31 @@
 import React from 'react'
-
-import Footer from './Component/Footer/Footer'
-import Header from './Component/Header/Header'
-import Builders from './Component/Builders/Builders'
+import Header from './Components/Header/Header'
+import Hero from './Components/Hero/Hero'
+import Design from './Components/Design/Design'
+import Footer from './Components/Footer/Footer'
+import { Route, Routes } from 'react-router-dom'
+import Home from './Home/Home'
+import Category from './Category/Category'
+import Builder from './Components/Builder/Builder'
+import Selling from './Components/Selling/Selling'
+import Testinomials from './Components/Testinomials/Testinomials'
 
 function App() {
   return (
     <>
-    <div className="wrapper">
- <Header/>
- </div>
- <Builders/>
-
-<Footer/>
-
-     
-          </>
+    <Header />
+    <Hero />
+    <Design />
+    <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/cat/:cid" element= {<Category/>} />
+       
+     </Routes>
+     <Builder />
+     <Selling />
+     <Testinomials />
+    <Footer />
+    </>
   )
 }
 
