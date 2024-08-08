@@ -21,7 +21,7 @@ function Selling() {
             </p>
           </div>
           <div className="website-builder  text-center justify-between gap-8 py-8 max-w[1300px] grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 sm:m-5 md:m-5 lg:m-0">
-            <div className="selling shadow-lg  py-4 bg-[#65BD7D] rounded-md text-center overflow-hidden hover:scale-105 duration-1000 hover:opacity-90">
+            <div className="selling shadow-lg px-4  py-4 bg-[#65BD7D] rounded-md text-center overflow-hidden hover:scale-105 duration-1000 hover:opacity-90">
               <div className="selling-img overflow-hidden ">
                 <img
                   src={img1}
@@ -33,13 +33,13 @@ function Selling() {
               <div className="sell-content ">
                 <h3 className="text-2xl py-2"> World-Class Support</h3>
 
-                <p className=" leading-6">
+                <p className=" leading-6 ">
                   We build long-term professional relationships with our
                   customers that you can rely on & trust.
                 </p>
               </div>
             </div>
-            <div className="selling shadow-lg px-8 py-4 bg-[#65BD7D] rounded-md overflow-hidden hover:scale-105 duration-1000 hover:opacity-90">
+            <div className="selling shadow-lg px-4 py-4 bg-[#65BD7D] rounded-md overflow-hidden hover:scale-105 duration-1000 hover:opacity-90">
               <div className="selling-img overflow-hidden">
                 <img
                   src={img2}
@@ -56,7 +56,7 @@ function Selling() {
                 </p>
               </div>
             </div>
-            <div className="selling shadow-lg px-8 py-4 bg-[#65BD7D] rounded-md overflow-hidden hover:scale-105 duration-1000 hover:opacity-90">
+            <div className="selling shadow-lg px-4 py-4 bg-[#65BD7D] rounded-md overflow-hidden hover:scale-105 duration-1000 hover:opacity-90">
               <div className="selling-img overflow-hidden">
                 <img
                   src={img3}
@@ -73,7 +73,7 @@ function Selling() {
                 </p>
               </div>
             </div>
-            <div className="selling shadow-lg px-8 py-4 bg-[#65BD7D] rounded-md overflow-hidden hover:scale-105 duration-1000 hover:opacity-90">
+            <div className="selling shadow-lg px-4 py-4 bg-[#65BD7D] rounded-md overflow-hidden hover:scale-105 duration-1000 hover:opacity-90">
               <div className="selling-img overflow-hidden">
                 <img
                   src={img4}

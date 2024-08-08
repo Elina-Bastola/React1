@@ -36,19 +36,19 @@ function Footer() {
                 Sign up to our newsletter and get all of{" "}
                 <span> the latest news and updates.</span>
               </h6>
-              <div className="sm:gap-6 sm:ms-8">
+             
               <form action="" className="py-6 ">
                 <input
                   type="text"
                   placeholder="your email*"
-                  className="py-4 footerform md:w-[280px] rounded-md px-3 outline-none text-black xs:w-[full] "
+                  className="py-4 footerform md:w-[280px] rounded-md px-3 outline-none text-black w-full "
                 />
-                <button className=" border border-b py-2 bg-[#141414]] px-3 mt-2 bottom rounded-lg hover:bg-[#65BD7D] ">
+                <button className="py-2 bg-[#141414]] px-3 mt-2 bottom rounded-lg hover:bg-[#65BD7D] border-2 md:border-white md:text-white hover:border-[#65BD7D]  block xs:hidden">
                   Subscribe
                 </button>
               </form>
               </div>
-            </div>
+         
           </div>
         </div>
         {/* <div className="copyrights border-b-4 py-8 ">

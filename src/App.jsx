@@ -23,7 +23,7 @@ function App() {
      </Routes>
      <Builder />
      <Selling />
-     <Testinomials />
+     {/* <Testinomials /> */}
     <Footer />
     </>
   )
